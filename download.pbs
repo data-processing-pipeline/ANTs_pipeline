@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#SBATCH -p general
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH --mem=4g
+#SBATCH -t 24:00:00
+
+cd /work/users/s/u/sunzehui/ANTS_UKBPhase6/;
+module add matlab
+matlab -nodesktop -nosplash -singleCompThread -r Extract6 -logfile Extract6.out

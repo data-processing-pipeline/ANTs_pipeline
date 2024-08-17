@@ -1,0 +1,16 @@
+code/
+QC/
+T1/
+Labels/
+csv_Cort/
+csv/
+bad_samples/
+to_compare/
+antsBrainSegmentation/
+antsCorticalThickness/
+antsExtractedBrain0N4/
+antsSubjectToTemplate1Warp/
+antsTemplateToSubject0Warp/
+antsBrainNormalizedToTemplate/
+antsSubjectToTemplateLogJacobian/
+antsCorticalThicknessNormalizedToTemplate/

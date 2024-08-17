@@ -1,0 +1,16 @@
+#SBATCH --ntasks=3
+#SBATCH --time=11:59:59
+#SBATCH --mem=16000
+#SBATCH --wrap=ANTs_12
+#!/bin/bash
+export ANTSPATH=/nas/longleaf/apps/ants/2.2.0/src/build/bin/ 
+export ANTSPATH1=/pine/scr/t/e/tengfei/ukbiobank_ants//Scripts/ 
+export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=3 
+bash ${ANTSPATH1}antsCorticalThickness.sh -d 3 -n 3 -w 0.25 \
+-a /pine/scr/t/e/tengfei/ukbiobank_ants/T1_raw/6005271/T1.nii.gz \
+-o /pine/scr/t/e/tengfei/ukbiobank_ants/T1_raw/6005271/Output/ants \
+-e /pine/scr/t/e/tengfei/ukbiobank_ants//Template_30/T_template0.nii.gz \
+-t /pine/scr/t/e/tengfei/ukbiobank_ants//Template_30/T_template0_BrainCerebellum.nii.gz \
+-m /pine/scr/t/e/tengfei/ukbiobank_ants//Template_30/T_template0_BrainCerebellumProbabilityMask.nii.gz \
+-f /pine/scr/t/e/tengfei/ukbiobank_ants//Template_30/T_template0_BrainCerebellumExtractionMask.nii.gz \
+-p /pine/scr/t/e/tengfei/ukbiobank_ants//Template_30/priors%d.nii.gz 
